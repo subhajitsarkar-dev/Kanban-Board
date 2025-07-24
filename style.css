@@ -12,9 +12,14 @@ body {
   align-items: center;
   min-height: 100vh;
   background-color: #222831;
+  padding: 20px;
+  flex-direction: column;
+  align-items: stretch;
 }
 .board {
   display: flex;
+  gap: 20px;
+  flex-direction: column;
   gap: 20px;
 }
 .column {
@@ -100,4 +105,30 @@ body {
   display: block;
   font-size: 12px;
   font-style: italic;
+}
+
+.column {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .board {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .column {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .board {
+    flex-direction: row;
+  }
+
+  .column {
+    width: 300px;
+  }
 }
